@@ -27,7 +27,10 @@ public class itemController : MonoBehaviour
         if(Input.GetButtonUp("Interact"))
         {
             beingCollected = false;
-            Destroy(pb.gameObject);
+            if (pb != null)
+            {
+                Destroy(pb.gameObject);
+            }
         }
 
         if(beingCollected)
