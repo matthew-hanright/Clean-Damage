@@ -6,13 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     public float positiveAcceleration = 2;
     public float negativeAcceleration = 3;
-    public float maxSpeed = 6;
-<<<<<<< HEAD
-    
-=======
+    public float maxSpeed = 6;    
 
     public static int playerOxygen = 100;
->>>>>>> f861055509c8cd8966664eaa3cb1db8f528a0abb
 
     [Header("0: metal, 1: plastic, 2: rubber, 3: electronics, 4: glass")]
     public int[] materials = { 0, 0, 0, 0, 0 };
