@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorOpen : MonoBehaviour
 {
     public Animator animator;
-    bool broken = true;
+    public bool broken = true;
     
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,8 +14,25 @@ public class DoorOpen : MonoBehaviour
         //The material will then be used and the door will always be fixed
         if (collision.gameObject.tag == "interact" && broken)
         {
-            Debug.Log("Fixed");
-            broken = false;
+            if (FindObjectOfType<PlayerController>().materials[0] >= 1)
+            {
+                if (FindObjectOfType<PlayerController>().materials[1] >= 1)
+                {
+                    Debug.Log("Fixed");
+                    FindObjectOfType<DoorOpen>().broken = false;
+                    FindObjectOfType<DoorOpen>().animator.SetBool("fixed", true);
+                    FindObjectOfType<PlayerController>().materials[0]--;
+                    FindObjectOfType<PlayerController>().materials[1]--;
+                }
+                else
+                {
+                    Debug.Log("Not enough materials");
+                }
+            }
+            else
+            {
+                Debug.Log("Not enough materials");
+            }
         }
         //This block controls the doors movement
         else if (collision.gameObject.tag == "interact" && !animator.GetBool("open") && !broken)

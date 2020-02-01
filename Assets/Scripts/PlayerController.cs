@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float positiveAcceleration = 2;
     public float negativeAcceleration = 3;
     public float maxSpeed = 6;
+    public int[] materials = { 0, 0, 0, 0, 0 };
 
     public bool hasControl = true;
 
