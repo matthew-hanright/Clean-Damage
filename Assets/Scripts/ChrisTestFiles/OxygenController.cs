@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class OxygenController : MonoBehaviour
 {
-    // OxygenController should be attached to the player. If the player
-    // collides with something, check if it is a room that isn't repaired,
-    // and start suffocating the player.
+    // OxygenController should be attached to the rooms. If the player
+    // collides with the room, check if the room's oxygen is repaired.
+    // If the oxygen is not repaired, start suffocating the player.
 
     // This will store the oxygen from PlayerController
     public int player_Oxygen = PlayerController.playerOxygen;
 
     // This will determine if the room has been repaired and can be manipulated
     // outside of this script
-    public bool repaired;
+    public bool oxygenRepaired;
 
     // Update is called once per frame
     void Update()
@@ -27,7 +27,7 @@ public class OxygenController : MonoBehaviour
     // If a gameObject collides with the fog of war...
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (repaired == false)
+        if (oxygenRepaired == false)
         {
             // ...check if it's the player...
             if (other.gameObject.name == "Player")

@@ -24,16 +24,16 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact"))
             {
-                interactBox.SetActive(true);
+                interactBox.layer = 0;
             }
             else if (Input.GetButtonUp("Interact"))
             {
-                interactBox.SetActive(false);
+                interactBox.layer = 8;
             }
         }
         else
         {
-            interactBox.SetActive(false);
+            interactBox.layer = 8;
         }
     }
 
