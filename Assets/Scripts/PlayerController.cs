@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     public float positiveAcceleration = 2;
     public float negativeAcceleration = 3;
     public float maxSpeed = 6;
-    public int[] materials = { 0, 0, 0, 0, 0 };
+
+    public static int playerOxygen = 100;
 
     [Header("0: metal, 1: plastic, 2: rubber, 3: electronics, 4: glass")]
     public int[] materials = { 0, 0, 0, 0, 0 };
