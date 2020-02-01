@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
+        //transform.position = player.transform.position;
     }
 
     void Update()
