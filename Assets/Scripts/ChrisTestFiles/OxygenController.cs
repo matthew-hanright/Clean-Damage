@@ -9,7 +9,7 @@ public class OxygenController : MonoBehaviour
     // and start suffocating the player.
 
     // This will store the oxygen from PlayerController
-    public int player_Oxygen;
+    public int player_Oxygen = PlayerController.playerOxygen;
 
     // This will determine if the room has been repaired and can be manipulated
     // outside of this script
@@ -18,7 +18,6 @@ public class OxygenController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player_Oxygen = PlayerController.playerOxygen;
         if (player_Oxygen == 0)
         {
             Debug.Log("Player is suffocating");
