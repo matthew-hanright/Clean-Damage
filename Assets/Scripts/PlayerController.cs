@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed = 6;
     public int[] materials = { 0, 0, 0, 0, 0 };
 
+    [Header("0: metal, 1: plastic, 2: rubber, 3: electronics, 4: glass")]
+    public int[] materials = { 0, 0, 0, 0, 0 };
+
     public bool hasControl = true;
 
     public GameObject interactBox;
@@ -25,11 +28,6 @@ public class PlayerController : MonoBehaviour
             else if (Input.GetButtonUp("Interact"))
             {
                 interactBox.SetActive(false);
-            }
-
-            if (Input.GetButtonDown("Inventory"))
-            {
-                inventoryUI.SetActive(!inventoryUI.activeSelf);
             }
         }
         else
