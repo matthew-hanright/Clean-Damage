@@ -16,6 +16,7 @@ public class itemController : MonoBehaviour
     private float collectionBeginTime;
     private Canvas canvas;
     private bool beingCollected = false;
+    private bool collidingWithCollect = false;
 
     private void Start()
     {
@@ -24,7 +25,16 @@ public class itemController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonUp("Interact"))
+        if (Input.GetButton("Interact") && collidingWithCollect && !beingCollected)
+        {
+            beingCollected = true;
+            collectionBeginTime = Time.time;
+            pb = Instantiate(progressBar);
+            pb.transform.SetParent(canvas.transform);
+            pb.transform.position = transform.position;
+        }
+
+        if (Input.GetButtonUp("Interact"))
         {
             beingCollected = false;
             if (pb != null)
@@ -35,29 +45,34 @@ public class itemController : MonoBehaviour
 
         if(beingCollected)
         {
-            pb.value = collectionLength / (Time.time - collectionBeginTime);
+            pb.value = (Time.time - collectionBeginTime) / collectionLength;
             if (Time.time > collectionBeginTime + collectionLength)
             {
                 FindObjectOfType<PlayerController>().materials[type] += amount;
                 Destroy(this.gameObject);
+                Destroy(pb.gameObject);
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "interact")
+        if(collision.tag == "collect")
         {
-            beingCollected = true;
-            collectionBeginTime = Time.time;
-            pb = Instantiate(progressBar);
-            pb.transform.parent = canvas.transform;
-            pb.transform.position = transform.position;
+            collidingWithCollect = true;
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        print("HERE");
+        if(collision.tag == "collect")
+        {
+            beingCollected = false;
+            collidingWithCollect = false;
+            if (pb != null)
+            {
+                Destroy(pb.gameObject);
+            }
+        }
     }
 }
