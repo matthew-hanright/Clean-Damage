@@ -1,12 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Assets.meta
-guid: f0c36168abc67d74383adb7201abe5cd
-folderAsset: yes
-DefaultImporter:
-=======
-guid: bda8d954d09df404fa9fd86dd4272057
+guid: d6f5a6cd116742e4c82abcf2b18917a9
 PrefabImporter:
->>>>>>> f861055509c8cd8966664eaa3cb1db8f528a0abb:Assets/Prefabs/Fog.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
