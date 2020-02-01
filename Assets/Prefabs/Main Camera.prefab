@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26189066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -373, y: 130, z: -9.473682}
-  m_LocalScale: {x: 0.052631576, y: 0.052631576, z: 0.10526315}
+  m_LocalPosition: {x: -359, y: 78, z: -9.473682}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.10526315}
   m_Children:
   - {fileID: 2094418150}
   m_Father: {fileID: 856059231}
@@ -69,12 +69,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 666973a37f77b5545ab81154f7ea603d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cad94f3fcd249454ea9efdb16110a07a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 500, y: 500}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -105,8 +105,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82818079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -373, y: 165, z: -9.473682}
-  m_LocalScale: {x: 0.052631576, y: 0.052631576, z: 0.10526315}
+  m_LocalPosition: {x: -359.00015, y: 126, z: -9.473682}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.10526315}
   m_Children:
   - {fileID: 1038204662}
   m_Father: {fileID: 856059231}
@@ -149,12 +149,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a75832c7b35a96045bb251869515a0ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55ef3cfde5d18cd49be43409b6e3cb6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 500, y: 500}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -187,14 +187,14 @@ RectTransform:
   m_GameObject: {fileID: 433203329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1621379230}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2875, y: -198}
+  m_AnchoredPosition: {x: 304.00165, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &433203332
@@ -226,7 +226,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ce7a390eb360e07468e94b85edcdb367, type: 3}
+    m_Font: {fileID: 12800000, guid: f761d70a98ce00b4eb1735edd73a3399, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -238,7 +238,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: '0
+
+'
 --- !u!1 &491246917
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,14 +268,14 @@ RectTransform:
   m_GameObject: {fileID: 491246917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1422279663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2874.998, y: -260}
+  m_AnchoredPosition: {x: 303.9997, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &491246920
@@ -305,7 +307,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ce7a390eb360e07468e94b85edcdb367, type: 3}
+    m_Font: {fileID: 12800000, guid: f761d70a98ce00b4eb1735edd73a3399, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -317,7 +319,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: '0
+
+'
 --- !u!1 &493070741
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,8 +347,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493070741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -373, y: 200, z: -9.473682}
-  m_LocalScale: {x: 0.052631576, y: 0.052631576, z: 0.10526315}
+  m_LocalPosition: {x: -359.00015, y: 174, z: -9.473682}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.10526315}
   m_Children:
   - {fileID: 897477413}
   m_Father: {fileID: 856059231}
@@ -387,12 +391,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 637a35985d411e64484638bbb989b841, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 085a4771b6b7c4e4da692976c76bf425, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 500, y: 500}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -407,6 +411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 856059231}
+  - component: {fileID: 856059232}
   m_Layer: 8
   m_Name: Inventory
   m_TagString: Untagged
@@ -435,9 +440,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &856059232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856059230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcf824bf69469848aa5467aa294172e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metal: {fileID: 433203331}
+  plastic: {fileID: 491246919}
+  rubber: {fileID: 897477414}
+  electronics: {fileID: 1038204663}
+  glass: {fileID: 2094418151}
 --- !u!1 &897477412
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,14 +487,14 @@ RectTransform:
   m_GameObject: {fileID: 897477412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 493070742}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2874.998, y: -246.99997}
+  m_AnchoredPosition: {x: 303.9997, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &897477415
@@ -504,7 +526,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ce7a390eb360e07468e94b85edcdb367, type: 3}
+    m_Font: {fileID: 12800000, guid: f761d70a98ce00b4eb1735edd73a3399, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -516,7 +538,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: '0
+
+'
 --- !u!1 &1038204661
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,14 +568,14 @@ RectTransform:
   m_GameObject: {fileID: 1038204661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 82818080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2874.998, y: -265.99997}
+  m_AnchoredPosition: {x: 304, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1038204664
@@ -583,7 +607,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ce7a390eb360e07468e94b85edcdb367, type: 3}
+    m_Font: {fileID: 12800000, guid: f761d70a98ce00b4eb1735edd73a3399, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -595,7 +619,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: '0
+
+'
 --- !u!1 &1422279662
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,8 +647,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422279662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -373, y: 235, z: -9.473682}
-  m_LocalScale: {x: 0.052631576, y: 0.052631576, z: 0.10526315}
+  m_LocalPosition: {x: -359.00015, y: 221.99995, z: -9.473682}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.10526315}
   m_Children:
   - {fileID: 491246918}
   m_Father: {fileID: 856059231}
@@ -665,12 +691,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9700991be3b393f419a6b0f17052b9fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5cff34394e1e92b43b8e0a1427ac8d58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 500, y: 500}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -701,8 +727,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621379229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -373, y: 270, z: -9.473683}
-  m_LocalScale: {x: 0.052631576, y: 0.052631576, z: 0.10526315}
+  m_LocalPosition: {x: -359.00015, y: 270, z: -9.473683}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.10526315}
   m_Children:
   - {fileID: 433203330}
   m_Father: {fileID: 856059231}
@@ -745,12 +771,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d1a5f2eb02b376a43854fcb75a63a0ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee679a8139e01064387afc8e408969b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 500, y: 500}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -783,14 +809,14 @@ RectTransform:
   m_GameObject: {fileID: 2094418149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 26189067}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2875.0022, y: -248}
+  m_AnchoredPosition: {x: 304.00385, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2094418152
@@ -822,7 +848,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ce7a390eb360e07468e94b85edcdb367, type: 3}
+    m_Font: {fileID: 12800000, guid: f761d70a98ce00b4eb1735edd73a3399, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -834,7 +860,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: '0
+
+'
 --- !u!1 &8810250964175258358
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,7 +1018,7 @@ SpriteRenderer:
   m_Size: {x: 32, y: 32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8810250964541792518
@@ -1138,7 +1166,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1154,7 +1182,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2850
+  orthographic size: 186.98666
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1289,6 +1317,6 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
