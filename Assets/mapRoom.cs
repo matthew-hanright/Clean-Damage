@@ -50,6 +50,6 @@ public class mapRoom : MonoBehaviour
 
     public void fixRoomOxygen()
     {
-        room.GetComponent<OxygenController>().repaired = true;
+        room.GetComponent<OxygenController>().oxygenRepaired = true;
     }
 }
