@@ -24,7 +24,9 @@ public class mapController : MonoBehaviour
     {
         isPrompting = true;
         repairPrompt.SetActive(true);
-        if (player.materials[3] < 1 || player.materials[4] < 1)
+        //Add || if electricty is repaired
+        if (player.materials[3] < 1 || 
+            player.materials[4] < 1)
         {
             electricity.interactable = false;
         }
@@ -33,7 +35,9 @@ public class mapController : MonoBehaviour
             electricity.interactable = true;
         }
 
-        if (player.materials[1] < 1 || player.materials[2] < 1)
+        if (player.materials[1] < 1 || 
+            player.materials[2] < 1 ||
+            activeRoom.GetComponent<mapRoom>().room.GetComponent<OxygenController>().oxygenRepaired)
         {
             oxygen.interactable = false;
         }
@@ -46,6 +50,7 @@ public class mapController : MonoBehaviour
     public void stopPrompt()
     {
         isPrompting = false;
+        activeRoom.GetComponent<SpriteRenderer>().enabled = false;
         repairPrompt.SetActive(false);
     }
 
@@ -54,13 +59,13 @@ public class mapController : MonoBehaviour
         if(isPrompting)
         {
             stopPrompt();
-            activeRoom.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 
     public void fixElectric()
     {
         activeRoom.GetComponent<mapRoom>().fixRoomElectricity();
+        stopPrompt();
         player.materials[3]--;
         player.materials[4]--;
     }
@@ -68,6 +73,7 @@ public class mapController : MonoBehaviour
     public void fixOxygen()
     {
         activeRoom.GetComponent<mapRoom>().fixRoomOxygen();
+        stopPrompt();
         player.materials[1]--;
         player.materials[2]--;
     }
