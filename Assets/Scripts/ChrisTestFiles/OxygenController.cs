@@ -15,15 +15,6 @@ public class OxygenController : MonoBehaviour
     // outside of this script
     public bool oxygenRepaired;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (player_Oxygen == 0)
-        {
-            Debug.Log("Player is suffocating");
-        } // if
-    } // Update
-
     // If a gameObject collides with the fog of war...
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -46,6 +37,7 @@ public class OxygenController : MonoBehaviour
         {
             player_Oxygen -= 1;
             Debug.Log("Player has " + player_Oxygen + " oxygen left.");
+            PlayerController.playerOxygen = player_Oxygen;
         } // if
     } // Subtract
 
@@ -65,8 +57,11 @@ public class OxygenController : MonoBehaviour
     {
         // If the player has room in his lungs...
         if(player_Oxygen < 100)
+        {
             // ...breathe
             player_Oxygen += 1;
+            PlayerController.playerOxygen = player_Oxygen;
+        } // if
         // Otherwise...
         else
             // ...stop breathing
