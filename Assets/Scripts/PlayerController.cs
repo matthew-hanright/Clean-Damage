@@ -9,9 +9,12 @@ public class PlayerController : MonoBehaviour
     public float negativeAcceleration = 3;
     public float maxSpeed = 6;
 
+    public Camera camera;
+
     public static int playerOxygen = 100;
     public Text oxygenText;
     public GameObject pausedUI;
+    public GameObject controlsUI;
 
     [Header("0: metal, 1: plastic, 2: rubber, 3: electronics, 4: glass")]
     public int[] materials = { 0, 0, 0, 0, 0 };
@@ -55,11 +58,13 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Time Stop");
                 Time.timeScale = 0;
-                //pausedUI.SetActive(true);
+                pausedUI.SetActive(true);
             }
             else if (Time.timeScale == 0)
             {
-                //pausedUI.SetActive(false);
+                if (controlsUI.active = true)
+                    controlsUI.SetActive(false);
+                pausedUI.SetActive(false);
                 Debug.Log("Time Start");
                 Time.timeScale = 1;
             }
@@ -126,7 +131,7 @@ public class PlayerController : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(newHSpeed, newVSpeed);
 
             //Face the mouse
-            Vector3 truetoCameraPosition = Camera.main.WorldToScreenPoint(transform.position);
+            Vector3 truetoCameraPosition = camera.WorldToScreenPoint(transform.position);
             Vector3 faceDirection = Input.mousePosition - truetoCameraPosition;
             float angle = Mathf.Atan2(faceDirection.y, faceDirection.x) * Mathf.Rad2Deg - 90;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);

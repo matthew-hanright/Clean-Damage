@@ -20,7 +20,7 @@ public class OxygenController : MonoBehaviour
         if(oxygenRepaired)
         {
             CancelInvoke("Suffocate");
-            CancelInvoke("Breathe");
+            //CancelInvoke("Breathe");
         }
     }
 

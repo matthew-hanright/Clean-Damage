@@ -25,6 +25,7 @@ public class ChangeScene : MonoBehaviour
     public void nextScene()
     {
         // It uses the Unity SceneManager to move to the desired scene
+        Time.timeScale = 1;
         SceneManager.LoadScene(goTo);
     } // nextScene
 } // ChangeScene

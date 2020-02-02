@@ -14,7 +14,7 @@ public class doorNPC : npcController
 
     public override void afterDialogueAction()
     {
-       
+        interactEndTime = Time.time;
         endDialogue();
     }
 

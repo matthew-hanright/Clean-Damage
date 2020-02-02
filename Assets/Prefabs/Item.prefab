@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  collectionLength: 0
-  amount: 0
+  collectionLength: 3
+  amount: 1
   progressBar: {fileID: 8009332162790120955, guid: 7e2bae2701e07424890a464131abad8d,
     type: 3}
 --- !u!61 &8906385134618907746

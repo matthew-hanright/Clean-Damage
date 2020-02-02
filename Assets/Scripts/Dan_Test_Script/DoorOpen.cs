@@ -33,7 +33,7 @@ public class DoorOpen : MonoBehaviour
                 }
                 else
                 {
-                    if (Time.time > FindObjectOfType<doorNPC>().interactEndTime + FindObjectOfType<doorNPC>().interactWaitTime)
+                    if (Time.time > gameObject.GetComponent<doorNPC>().interactEndTime + gameObject.GetComponent<doorNPC>().interactWaitTime)
                     {
                         dialogueArray dialogueNotEnough = new dialogueArray();
                         dialogueNotEnough.line = new string[] { "You need metal: " + metal + ", and rubber: " + rubber + " to repair a door." };
@@ -49,7 +49,7 @@ public class DoorOpen : MonoBehaviour
             }
             else
             {
-                if (Time.time > FindObjectOfType<doorNPC>().interactEndTime + FindObjectOfType<doorNPC>().interactWaitTime)
+                if (Time.time > gameObject.GetComponent<doorNPC>().interactEndTime + gameObject.GetComponent<doorNPC>().interactWaitTime)
                 {
                     dialogueArray dialogueNotEnough = new dialogueArray();
                     dialogueNotEnough.line = new string[] { "You need metal: " + metal + ", and rubber: " + rubber + " to repair a door." };
