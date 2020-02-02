@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2414379985594682861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2414379985594682838}
+  - component: {fileID: 2414379985594682839}
+  - component: {fileID: 2414379985594682832}
+  - component: {fileID: 2414379985594682833}
+  - component: {fileID: 2414379985594682834}
+  - component: {fileID: 2414379985594682860}
+  - component: {fileID: 2414379985594682837}
+  - component: {fileID: 2414379985594682835}
+  m_Layer: 0
+  m_Name: engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2414379985594682838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414379985594682861}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: -12, y: -193, z: 59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!212 &2414379985594682839
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414379985594682861}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a132e59df4888b44e833aebd4f545143, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 38, y: 35.77778}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &2414379985594682832
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414379985594682861}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 51.10193}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 500, y: 250}
+    newSize: {x: 38, y: 35.77778}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 500, y: 147.79614}
+  m_EdgeRadius: 0
+--- !u!50 &2414379985594682833
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414379985594682861}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!114 &2414379985594682834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414379985594682861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1303391c4aa194e439bf16572b9bfabc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialsToRepair: 0000000002000000000000000300000002000000
+  messageToRepair: 'Life support system damaged.  Needed to repair: '
+  messageWhenRepaired: Ship life support fully restored.
+  portrait: {fileID: 21300000, guid: 71a3beee415efc64188529117a0e288f, type: 3}
+  repairPrompt: {fileID: 0}
+  isRepaired: 0
+--- !u!60 &2414379985594682860
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414379985594682861}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 500, y: 250}
+    newSize: {x: 38, y: 35.77778}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -165.37302, y: -27.276749}
+      - {x: -115.30733, y: -27.039902}
+      - {x: 98.34632, y: -26.38652}
+      - {x: 129.99074, y: 45.057327}
+      - {x: 97.19496, y: 36.710693}
+      - {x: 109.25909, y: 35.5112}
+      - {x: 95.44943, y: 64.35156}
+      - {x: 8.039013, y: 24.069794}
+      - {x: 10.961021, y: 21.910187}
+      - {x: 23.419682, y: 37.698227}
+      - {x: 46.87838, y: 62.139603}
+      - {x: 69.60542, y: 42.431396}
+      - {x: 88.33707, y: 24.937622}
+      - {x: 129.68341, y: 34.271774}
+      - {x: 55.750168, y: 35.937607}
+      - {x: 45.87175, y: 46.60594}
+      - {x: 157.61469, y: 38.44632}
+      - {x: 90.79379, y: -26.197021}
+      - {x: 150.26682, y: -26.438065}
+      - {x: 188.69267, y: -64.46634}
+      - {x: 250.57568, y: -123.693275}
+      - {x: 250, y: -125}
+      - {x: 250, y: 125}
+      - {x: -250, y: 125}
+      - {x: -250, y: -125}
+      - {x: -250.26834, y: -123.0399}
+      - {x: -201.96101, y: -68.73316}
+    - - {x: 98.01388, y: 26.48375}
+      - {x: 107.46794, y: 23.576035}
+      - {x: 179.72241, y: 30.763062}
+    - - {x: -193.54619, y: -11.6324005}
+      - {x: -177.0583, y: 26.777344}
+      - {x: -126.264565, y: 1.3254395}
+    - - {x: 92.69729, y: 24.882767}
+      - {x: 78.8189, y: 43.177032}
+      - {x: 95.42894, y: 35.95009}
+--- !u!114 &2414379985594682837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414379985594682861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f79c6a17ea52540b0f3a1aafd9b6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialsToRepair: 0000000002000000000000000300000002000000
+  messageToRepair: 'Engines critically damaged.  Needed to repair: '
+  messageWhenRepaired: Engine integrity fully restored.
+  portrait: {fileID: 21300000, guid: 7a8c613ee8797424da9a34189c78ec33, type: 3}
+  repairPrompt: {fileID: 0}
+  isRepaired: 0
+--- !u!114 &2414379985594682835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414379985594682861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbe90e45afade640bdbb49caadca474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: []
+  currentDialogue: 0
+  engine: {fileID: 0}
+  yes: {fileID: 0}

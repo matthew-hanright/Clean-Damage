@@ -11,6 +11,8 @@ public class DoorOpen : MonoBehaviour
     public int metal = 1;
     public int rubber = 1;
 
+    public Sprite portrait;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Player has to have the right material to fix the door
@@ -31,9 +33,27 @@ public class DoorOpen : MonoBehaviour
                 }
                 else
                 {
+                    if (Time.time > FindObjectOfType<doorNPC>().interactEndTime + FindObjectOfType<doorNPC>().interactWaitTime)
+                    {
+                        dialogueArray dialogueNotEnough = new dialogueArray();
+                        dialogueNotEnough.line = new string[] { "You need metal: " + metal + ", and rubber: " + rubber + " to repair a door." };
+                        dialogueNotEnough.sprite = new Sprite[] { portrait };
+                        PlayerController player = FindObjectOfType<PlayerController>();
+                        player.hasControl = false;
+                        player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                        player.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
+                        FindObjectOfType<BasicDisplayText>().hasControl = true;
+                        FindObjectOfType<BasicDisplayText>().displayText(gameObject, dialogueNotEnough);
+                    }
+                }
+            }
+            else
+            {
+                if (Time.time > FindObjectOfType<doorNPC>().interactEndTime + FindObjectOfType<doorNPC>().interactWaitTime)
+                {
                     dialogueArray dialogueNotEnough = new dialogueArray();
                     dialogueNotEnough.line = new string[] { "You need metal: " + metal + ", and rubber: " + rubber + " to repair a door." };
-                    dialogueNotEnough.sprite = new Sprite[] { GetComponent<SpriteRenderer>().sprite };
+                    dialogueNotEnough.sprite = new Sprite[] { portrait };
                     PlayerController player = FindObjectOfType<PlayerController>();
                     player.hasControl = false;
                     player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -41,18 +61,6 @@ public class DoorOpen : MonoBehaviour
                     FindObjectOfType<BasicDisplayText>().hasControl = true;
                     FindObjectOfType<BasicDisplayText>().displayText(gameObject, dialogueNotEnough);
                 }
-            }
-            else
-            {
-                dialogueArray dialogueNotEnough = new dialogueArray();
-                dialogueNotEnough.line = new string[] { "You need metal: " + metal + ", and rubber: " + rubber + " to repair a door." };
-                dialogueNotEnough.sprite = new Sprite[] { GetComponent<SpriteRenderer>().sprite };
-                PlayerController player = FindObjectOfType<PlayerController>();
-                player.hasControl = false;
-                player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                player.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
-                FindObjectOfType<BasicDisplayText>().hasControl = true;
-                FindObjectOfType<BasicDisplayText>().displayText(gameObject, dialogueNotEnough);
             }
         }
         //This block controls the doors movement

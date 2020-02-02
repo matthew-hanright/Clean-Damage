@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class doorNPC : npcController
 {
-    private float interactEndTime;
-    private float interactWaitTime = 0.1f;
+    public float interactEndTime;
+    public float interactWaitTime = 0.1f;
 
     private void Start()
     {
