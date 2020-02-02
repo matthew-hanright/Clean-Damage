@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class DoorOpen : MonoBehaviour
 {
+    public AudioSource openSound;
+    public AudioSource repairSound;
     public Animator animator;
     public bool broken = true;
     public int metal = 1;
     public int rubber = 1;
-
-
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,7 +21,8 @@ public class DoorOpen : MonoBehaviour
             {
                 if (FindObjectOfType<PlayerController>().materials[2] >= rubber)
                 {
-                    Debug.Log("Fixed");
+                    //Debug.Log("Fixed");
+                    repairSound.Play();
                     broken = false;
                     animator.SetBool("fixed", true);
                     //Debug.Log(FindObjectOfType<DoorOpen>().animator.GetBool("fixed"));
@@ -42,12 +42,12 @@ public class DoorOpen : MonoBehaviour
         //This block controls the doors movement
         else if (collision.gameObject.tag == "interact" && !animator.GetBool("open") && !broken)
         {
-            //Debug.Log("Door is Open");
+            openSound.Play();
             animator.SetBool("open", true);
         }
         else if(collision.gameObject.tag == "interact" && animator.GetBool("open") && !broken)
         {
-            //Debug.Log("Door is Closed");
+            openSound.Play();
             animator.SetBool("open", false);
         }
     }

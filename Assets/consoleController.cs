@@ -6,6 +6,7 @@ public class consoleController : MonoBehaviour
 {
     public Camera mainCam;
     public Camera mapCam;
+    public AudioSource sound;
 
     private PlayerController player;
 
@@ -20,6 +21,7 @@ public class consoleController : MonoBehaviour
     {
         if(inRange && Input.GetButtonDown("Interact"))
         {
+            sound.Play();
             if(mainCam.enabled)
             {
                 mainCam.enabled = false;
