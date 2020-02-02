@@ -6,6 +6,10 @@ public class DoorOpen : MonoBehaviour
 {
     public Animator animator;
     public bool broken = true;
+    public int metal = 1;
+    public int rubber = 1;
+
+
     
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,13 +18,14 @@ public class DoorOpen : MonoBehaviour
         //The material will then be used and the door will always be fixed
         if (collision.gameObject.tag == "interact" && broken)
         {
-            if (FindObjectOfType<PlayerController>().materials[0] >= 1)
+            if (FindObjectOfType<PlayerController>().materials[0] >= metal)
             {
-                if (FindObjectOfType<PlayerController>().materials[1] >= 1)
+                if (FindObjectOfType<PlayerController>().materials[2] >= rubber)
                 {
                     Debug.Log("Fixed");
-                    FindObjectOfType<DoorOpen>().broken = false;
-                    FindObjectOfType<DoorOpen>().animator.SetBool("fixed", true);
+                    broken = false;
+                    animator.SetBool("fixed", true);
+                    //Debug.Log(FindObjectOfType<DoorOpen>().animator.GetBool("fixed"));
                     FindObjectOfType<PlayerController>().materials[0]--;
                     FindObjectOfType<PlayerController>().materials[1]--;
                 }
