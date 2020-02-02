@@ -9,7 +9,7 @@ public class OxygenController : MonoBehaviour
     // If the oxygen is not repaired, start suffocating the player.
 
     // This will store the oxygen from PlayerController
-    public int player_Oxygen = PlayerController.playerOxygen;
+    private int player_Oxygen = PlayerController.playerOxygen;
 
     // This will determine if the room has been repaired and can be manipulated
     // outside of this script

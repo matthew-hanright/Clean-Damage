@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public static int playerOxygen = 100;
     public Text oxygenText;
+    public GameObject pausedUI;
 
     [Header("0: metal, 1: plastic, 2: rubber, 3: electronics, 4: glass")]
     public int[] materials = { 0, 0, 0, 0, 0 };
@@ -22,7 +23,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-
         string myOxygen = playerOxygen.ToString();
         //oxygenText.text = myOxygen;
 
@@ -55,9 +55,11 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Time Stop");
                 Time.timeScale = 0;
+                pausedUI.SetActive(true);
             }
             else if (Time.timeScale == 0)
             {
+                pausedUI.SetActive(false);
                 Debug.Log("Time Start");
                 Time.timeScale = 1;
             }
