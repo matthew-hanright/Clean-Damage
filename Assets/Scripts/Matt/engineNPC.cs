@@ -8,6 +8,7 @@ public class engineNPC : npcController
     public engineController engine;
 
     public Button yes;
+    public Button no;
 
     private float interactEndTime;
     private float interactWaitTime = 0.1f;
@@ -24,7 +25,9 @@ public class engineNPC : npcController
             PlayerController player = FindObjectOfType<PlayerController>();
             FindObjectOfType<engineController>().repairPrompt.SetActive(true);
             yes.interactable = true;
-            for(int i = 0; i < engine.materialsToRepair.Length; i++)
+            yes.onClick.AddListener(FindObjectOfType<engineController>().repair);
+            no.onClick.AddListener(FindObjectOfType<engineController>().cancel);
+            for (int i = 0; i < engine.materialsToRepair.Length; i++)
             {
                 if(player.materials[i] < engine.materialsToRepair[i])
                 {

@@ -8,6 +8,7 @@ public class lifeSupportNPC : npcController
     public lifeSupportController lifeSupport;
 
     public Button yes;
+    public Button no;
 
     private float interactEndTime;
     private float interactWaitTime = 0.1f;
@@ -24,7 +25,9 @@ public class lifeSupportNPC : npcController
             PlayerController player = FindObjectOfType<PlayerController>();
             FindObjectOfType<lifeSupportController>().repairPrompt.SetActive(true);
             yes.interactable = true;
-            for(int i = 0; i < lifeSupport.materialsToRepair.Length; i++)
+            yes.onClick.AddListener(FindObjectOfType<lifeSupportController>().repair);
+            no.onClick.AddListener(FindObjectOfType<lifeSupportController>().cancel);
+            for (int i = 0; i < lifeSupport.materialsToRepair.Length; i++)
             {
                 if(player.materials[i] < lifeSupport.materialsToRepair[i])
                 {

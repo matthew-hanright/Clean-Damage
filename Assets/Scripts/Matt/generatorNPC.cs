@@ -8,6 +8,7 @@ public class generatorNPC : npcController
     public generatorController engine;
 
     public Button yes;
+    public Button no;
 
     private float interactEndTime;
     private float interactWaitTime = 0.1f;
@@ -24,7 +25,9 @@ public class generatorNPC : npcController
             PlayerController player = FindObjectOfType<PlayerController>();
             FindObjectOfType<generatorController>().repairPrompt.SetActive(true);
             yes.interactable = true;
-            for(int i = 0; i < engine.materialsToRepair.Length; i++)
+            yes.onClick.AddListener(FindObjectOfType<generatorController>().repair);
+            no.onClick.AddListener(FindObjectOfType<generatorController>().cancel);
+            for (int i = 0; i < engine.materialsToRepair.Length; i++)
             {
                 if(player.materials[i] < engine.materialsToRepair[i])
                 {

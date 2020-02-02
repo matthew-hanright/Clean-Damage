@@ -55,11 +55,11 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Time Stop");
                 Time.timeScale = 0;
-                pausedUI.SetActive(true);
+                //pausedUI.SetActive(true);
             }
             else if (Time.timeScale == 0)
             {
-                pausedUI.SetActive(false);
+                //pausedUI.SetActive(false);
                 Debug.Log("Time Start");
                 Time.timeScale = 1;
             }

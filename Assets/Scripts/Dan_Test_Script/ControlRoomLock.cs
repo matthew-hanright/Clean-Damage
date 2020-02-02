@@ -17,6 +17,13 @@ public class ControlRoomLock : MonoBehaviour
 
     public Sprite portrait;
 
+    private void Start()
+    {
+        lifeSupport = FindObjectOfType<lifeSupportController>();
+        engine = FindObjectOfType<engineController>();
+        generator = FindObjectOfType<generatorController>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Player has to have the right material to fix the door
@@ -32,7 +39,7 @@ public class ControlRoomLock : MonoBehaviour
             else
             {
                 dialogueArray dialogueNotEnough = new dialogueArray();
-                dialogueNotEnough.line = new string[] { "You need metal to repair the core systems to disengage the lockdown." };
+                dialogueNotEnough.line = new string[] { "You need to repair the 3 core systems to disengage the lockdown." };
                 dialogueNotEnough.sprite = new Sprite[] { portrait };
                 PlayerController player = FindObjectOfType<PlayerController>();
                 player.hasControl = false;

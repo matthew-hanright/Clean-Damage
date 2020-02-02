@@ -9,15 +9,25 @@ public class OxygenController : MonoBehaviour
     // If the oxygen is not repaired, start suffocating the player.
 
     // This will store the oxygen from PlayerController
-    private int player_Oxygen = PlayerController.playerOxygen;
+    private int player_Oxygen;
 
     // This will determine if the room has been repaired and can be manipulated
     // outside of this script
-    public bool oxygenRepaired;
+    public bool oxygenRepaired = false;
+
+    private void Update()
+    {
+        if(oxygenRepaired)
+        {
+            CancelInvoke("Suffocate");
+            CancelInvoke("Breathe");
+        }
+    }
 
     // If a gameObject collides with the fog of war...
     void OnTriggerEnter2D(Collider2D other)
     {
+        player_Oxygen = PlayerController.playerOxygen;
         if (oxygenRepaired == false)
         {
             // ...check if it's the player...
@@ -29,6 +39,11 @@ public class OxygenController : MonoBehaviour
                 InvokeRepeating("Suffocate", 1.0f, 1.0f);
             } // if
         } // if
+        else
+        {
+            CancelInvoke("Suffocate");
+            InvokeRepeating("Breathe", 1.0f, 0.5f);
+        } // else
     } // OnCollisionEnter
 
     void Suffocate()
@@ -48,7 +63,7 @@ public class OxygenController : MonoBehaviour
         {
             // ...and help him out by letting him breathe
             CancelInvoke("Suffocate");
-            InvokeRepeating("Breathe", 1.0f, 0.5f);
+            // InvokeRepeating("Breathe", 1.0f, 0.5f);
         } // if
     } // OnTriggerExist
 
