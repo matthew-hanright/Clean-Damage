@@ -41,6 +41,10 @@ public class mapRoom : MonoBehaviour
             map.activeRoom = this.gameObject;
             map.prompt();
         }
+        else
+        {
+            map.stopPrompt();
+        }
     }
 
     public void fixRoomElectricity()
@@ -50,6 +54,7 @@ public class mapRoom : MonoBehaviour
 
     public void fixRoomOxygen()
     {
+        print("HERE2");
         room.GetComponent<OxygenController>().oxygenRepaired = true;
     }
 }
