@@ -48,6 +48,20 @@ public class PlayerController : MonoBehaviour
         {
             interactBox.layer = 8;
         }
+        if (Input.GetButtonDown("Pause"))
+        {
+            Debug.Log("Escape Pressed");
+            if (Time.timeScale > 0)
+            {
+                Debug.Log("Time Stop");
+                Time.timeScale = 0;
+            }
+            else if (Time.timeScale == 0)
+            {
+                Debug.Log("Time Start");
+                Time.timeScale = 1;
+            }
+        }
     }
 
     private void FixedUpdate()
