@@ -58,6 +58,10 @@ public class lifeSupportController : MonoBehaviour
             player.materials[i] -= materialsToRepair[i];
         }
         repairPrompt.SetActive(false);
+        OxygenController[] roomOxygen = FindObjectsOfType<OxygenController>();
+        foreach (OxygenController oxy in roomOxygen) {
+            oxy.oxygenRepaired = true;
+        }
         FindObjectOfType<BasicDisplayText>().hasControl = true;
         FindObjectOfType<BasicDisplayText>().displayText(gameObject, dialogueWhenRepaired);
     }
