@@ -11,11 +11,16 @@ public class CutScene1 : MonoBehaviour
     void Start()
     {
         player.enabled = false;
-
+        Dialouge();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Dialouge()
+    {
+
+
+    }
+        // Update is called once per frame
+        void Update()
     {
         if (animator.GetBool("oneDone") && stop)
         {
