@@ -36,7 +36,6 @@ public class OxygenController : MonoBehaviour
         if (player_Oxygen > 0)
         {
             player_Oxygen -= 1;
-            Debug.Log("Player has " + player_Oxygen + " oxygen left.");
             PlayerController.playerOxygen = player_Oxygen;
         } // if
     } // Subtract
@@ -66,7 +65,6 @@ public class OxygenController : MonoBehaviour
         else
             // ...stop breathing
             CancelInvoke("Breathe");
-        Debug.Log("Player has " + player_Oxygen + " oxygen left.");
     } // Breathe
 
 } // OxygenController

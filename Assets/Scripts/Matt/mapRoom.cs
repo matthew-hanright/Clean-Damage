@@ -49,7 +49,7 @@ public class mapRoom : MonoBehaviour
 
     public void fixRoomElectricity()
     {
-
+        room.GetComponent<FogController>().electricityRepaired = true;
     }
 
     public void fixRoomOxygen()

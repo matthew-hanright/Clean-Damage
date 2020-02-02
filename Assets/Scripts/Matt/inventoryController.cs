@@ -20,10 +20,10 @@ public class inventoryController : MonoBehaviour
 
     private void Update()
     {
-        metal.text = player.materials[0] + "";
-        plastic.text = player.materials[1] + "";
-        rubber.text = player.materials[2] + "";
-        electronics.text = player.materials[3] + "";
-        glass.text = player.materials[4] + "";
+        metal.text = player.materials[0] + ": Metal";
+        plastic.text = player.materials[1] + ": Plastic";
+        rubber.text = player.materials[2] + ": Rubber";
+        electronics.text = player.materials[3] + ": Electronics";
+        glass.text = player.materials[4] + ": Glass";
     }
 }

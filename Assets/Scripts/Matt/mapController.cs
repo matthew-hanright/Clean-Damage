@@ -24,9 +24,9 @@ public class mapController : MonoBehaviour
     {
         isPrompting = true;
         repairPrompt.SetActive(true);
-        //Add || if electricty is repaired
         if (player.materials[3] < 1 || 
-            player.materials[4] < 1)
+            player.materials[4] < 1 ||
+            activeRoom.GetComponent<mapRoom>().room.GetComponent<FogController>().electricityRepaired)
         {
             electricity.interactable = false;
         }

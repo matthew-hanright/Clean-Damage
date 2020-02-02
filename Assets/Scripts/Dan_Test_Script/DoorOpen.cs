@@ -29,7 +29,7 @@ public class DoorOpen : MonoBehaviour
                     animator.SetBool("fixed", true);
                     //Debug.Log(FindObjectOfType<DoorOpen>().animator.GetBool("fixed"));
                     FindObjectOfType<PlayerController>().materials[0]--;
-                    FindObjectOfType<PlayerController>().materials[1]--;
+                    FindObjectOfType<PlayerController>().materials[2]--;
                 }
                 else
                 {
