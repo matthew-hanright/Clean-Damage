@@ -247,6 +247,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5200673059900346471}
+  - component: {fileID: 114430267904664442}
+  - component: {fileID: 114320380940557350}
   m_Layer: 8
   m_Name: Parralax
   m_TagString: Untagged
@@ -270,3 +272,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114430267904664442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754534767957687639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bfe0f4b302fd5448bdf24523bbead6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_Oxygen: 100
+  oxygenRepaired: 0
+--- !u!114 &114320380940557350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754534767957687639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bfe0f4b302fd5448bdf24523bbead6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_Oxygen: 100
+  oxygenRepaired: 0

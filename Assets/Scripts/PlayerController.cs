@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float positiveAcceleration = 2;
     public float negativeAcceleration = 3;
-    public float maxSpeed = 6;    
+    public float maxSpeed = 6;
 
     public static int playerOxygen = 100;
+    public Text oxygenText;
 
     [Header("0: metal, 1: plastic, 2: rubber, 3: electronics, 4: glass")]
     public int[] materials = { 0, 0, 0, 0, 0 };
@@ -20,6 +22,17 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
+        string myOxygen = playerOxygen.ToString();
+        oxygenText.text = myOxygen;
+
+        // Check if the player has suffocated...
+        if (playerOxygen == 0)
+        {
+            // ...and end the game if this is the case
+            GetComponent<LoseScript>().Suffocated();
+        } // if
+
         if (hasControl)
         {
             if (Input.GetButtonDown("Interact"))
