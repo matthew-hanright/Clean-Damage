@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     {
 
         string myOxygen = playerOxygen.ToString();
-        oxygenText.text = myOxygen;
+        //oxygenText.text = myOxygen;
 
         // Check if the player has suffocated...
         if (playerOxygen == 0)

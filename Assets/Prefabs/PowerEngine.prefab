@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6666795495995359149}
   - component: {fileID: 6666795495995359148}
   - component: {fileID: 3511600638973339646}
+  - component: {fileID: 2079621397}
+  - component: {fileID: 2079621398}
   m_Layer: 0
   m_Name: PowerEngine
   m_TagString: Untagged
@@ -179,3 +181,37 @@ PolygonCollider2D:
       - {x: 154, y: 24}
       - {x: 145, y: 24}
       - {x: 131, y: 17}
+--- !u!114 &2079621397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666795495995359147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbe90e45afade640bdbb49caadca474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: []
+  currentDialogue: 0
+  engine: {fileID: 0}
+  yes: {fileID: 0}
+--- !u!114 &2079621398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666795495995359147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f79c6a17ea52540b0f3a1aafd9b6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialsToRepair: 0000000002000000000000000300000002000000
+  messageToRepair: 'Ship generator severely damaged.  Needed to repair: '
+  messageWhenRepaired: Ship generator repaired and electricity fully restored.
+  portrait: {fileID: 21300000, guid: da38e64692b67a7458a2913f2b1a8641, type: 3}
+  repairPrompt: {fileID: 0}
+  isRepaired: 0

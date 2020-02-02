@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class engineNPC : npcController
+public class generatorNPC : npcController
 {
-    public engineController engine;
+    public generatorController engine;
 
     public Button yes;
 
@@ -14,7 +14,7 @@ public class engineNPC : npcController
 
     private void Start()
     {
-        engine = FindObjectOfType<engineController>();
+        engine = FindObjectOfType<generatorController>();
     }
 
     public override void afterDialogueAction()
@@ -22,7 +22,7 @@ public class engineNPC : npcController
         if (!engine.isRepaired)
         {
             PlayerController player = FindObjectOfType<PlayerController>();
-            FindObjectOfType<engineController>().repairPrompt.SetActive(true);
+            FindObjectOfType<generatorController>().repairPrompt.SetActive(true);
             yes.interactable = true;
             for(int i = 0; i < engine.materialsToRepair.Length; i++)
             {
