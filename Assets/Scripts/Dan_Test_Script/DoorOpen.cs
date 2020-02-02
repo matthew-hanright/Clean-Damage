@@ -31,12 +31,28 @@ public class DoorOpen : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough materials");
+                    dialogueArray dialogueNotEnough = new dialogueArray();
+                    dialogueNotEnough.line = new string[] { "You need metal: " + metal + ", and rubber: " + rubber + " to repair a door." };
+                    dialogueNotEnough.sprite = new Sprite[] { GetComponent<SpriteRenderer>().sprite };
+                    PlayerController player = FindObjectOfType<PlayerController>();
+                    player.hasControl = false;
+                    player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    player.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
+                    FindObjectOfType<BasicDisplayText>().hasControl = true;
+                    FindObjectOfType<BasicDisplayText>().displayText(gameObject, dialogueNotEnough);
                 }
             }
             else
             {
-                Debug.Log("Not enough materials");
+                dialogueArray dialogueNotEnough = new dialogueArray();
+                dialogueNotEnough.line = new string[] { "You need metal: " + metal + ", and rubber: " + rubber + " to repair a door." };
+                dialogueNotEnough.sprite = new Sprite[] { GetComponent<SpriteRenderer>().sprite };
+                PlayerController player = FindObjectOfType<PlayerController>();
+                player.hasControl = false;
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                player.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
+                FindObjectOfType<BasicDisplayText>().hasControl = true;
+                FindObjectOfType<BasicDisplayText>().displayText(gameObject, dialogueNotEnough);
             }
         }
         //This block controls the doors movement
