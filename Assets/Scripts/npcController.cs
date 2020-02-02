@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class npcController : MonoBehaviour
+public class npcController : abstractNPC
 {
-    public dialogueArray[] dialogue;
-    public int currentDialogue;
-
     private PlayerController player;
 
     private float interactEndTime;
     private float interactWaitTime = 0.1f;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerController>();
+    }
+
+    new private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "interact" && Time.time > interactEndTime + interactWaitTime)
         {
@@ -26,7 +28,7 @@ public class npcController : MonoBehaviour
         }
     }
 
-    public void afterDialogueAction()
+    new public virtual void afterDialogueAction()
     {
         if(currentDialogue < dialogue.Length - 1)
         {
@@ -35,9 +37,10 @@ public class npcController : MonoBehaviour
         endDialogue();
     }
 
-    private void endDialogue()
+    new private void endDialogue()
     {
-        player.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        //player.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        player = FindObjectOfType<PlayerController>();
         player.hasControl = true;
         interactEndTime = Time.time;
     }

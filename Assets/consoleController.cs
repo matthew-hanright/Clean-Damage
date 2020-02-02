@@ -25,7 +25,7 @@ public class consoleController : MonoBehaviour
                 mainCam.enabled = false;
                 mapCam.enabled = true;
                 player.hasControl = false;
-                player.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                //player.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 player.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
             }
